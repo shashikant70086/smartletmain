@@ -1,0 +1,23 @@
+.stars, .twinkling {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.stars {
+  background: url('https://raw.githubusercontent.com/VincentGarreau/particles.js/master/demo/media/stars.png') repeat;
+  z-index: 0;
+}
+
+.twinkling {
+  background: url('https://raw.githubusercontent.com/VincentGarreau/particles.js/master/demo/media/twinkling.png') repeat;
+  animation: moveTwinkBack 200s linear infinite;
+  z-index: 1;
+}
+
+@keyframes moveTwinkBack {
+  from {background-position: 0 0;}
+  to {background-position: -10000px 5000px;}
+}

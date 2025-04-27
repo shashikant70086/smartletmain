@@ -1,0 +1,33 @@
+.stars, .twinkling {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Static star layer */
+.stars {
+  background: transparent url('https://www.transparenttextures.com/patterns/stardust.png') repeat top center;
+  animation: moveStars 200s linear infinite;
+}
+
+/* Twinkling star overlay */
+.twinkling {
+  background: transparent url('https://www.transparenttextures.com/patterns/dark-mosaic.png') repeat top center;
+  animation: moveTwinkling 100s linear infinite;
+  opacity: 0.2;
+}
+
+@keyframes moveStars {
+  from { background-position: 0 0; }
+  to { background-position: -10000px 5000px; }
+}
+
+@keyframes moveTwinkling {
+  from { background-position: 0 0; }
+  to { background-position: 10000px 5000px; }
+}
