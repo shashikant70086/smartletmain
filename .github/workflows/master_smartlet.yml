@@ -22,11 +22,11 @@ jobs:
         with:
           java-version: '17'
           distribution: 'microsoft'
-
       - name: Build with Maven (inside backend directory)
         run: |
           cd backend
-          mvn clean package -DskipTests
+          ./mvnw clean install spring-boot:repackage -DskipTests
+        
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
