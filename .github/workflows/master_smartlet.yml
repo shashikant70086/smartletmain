@@ -63,4 +63,5 @@ jobs:
         with:
           app-name: 'smartlet'
           slot-name: 'Production'
-          package: '*.jar'
+          package: 'java-app/*.jar'
+
